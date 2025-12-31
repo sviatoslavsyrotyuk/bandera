@@ -1,0 +1,102 @@
+/* ОБНУЛЕННЯ ТА ЦЕНТРУВАННЯ САЙТУ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f0; /* Колір фону навколо мобільної версії */
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ГОЛОВНИЙ КОНТЕЙНЕР - ТУТ ВАШІ 390px ТА 1000px */
+/* ... (початок файлу без змін) ... */
+
+.mobile-container {
+    width: 390px;
+    height: 1000px;
+    background: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    box-shadow: 0 0 50px rgba(0,0,0,0.1);
+}
+
+.layer { position: absolute; }
+.layer img { width: 100%; display: block; }
+
+/* Координати Figma */
+.layer-up { width: 390px; height: 147.5px; top: 0; left: 0; z-index: 1; }
+.layer-portrait { width: 328px; height: 249.3px; left: 31px; top: 147px; z-index: 2; }
+.layer-centre { width: 390px; height: 382px; left: 0; top: 302px; z-index: 5; }
+
+.button-support {
+    position: absolute;
+    width: 255px;
+    height: 60px; /* Трохи зменшив висоту для компактності */
+    left: 67.5px;
+    top: 478px;
+    background: #FFFFFF;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 24px;
+    z-index: 15;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Блок реквізитів */
+.donation-details {
+    position: absolute;
+    top: 550px; /* Підтягнув вище */
+    width: 100%;
+    text-align: center;
+    z-index: 16;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+.donation-details p { margin-bottom: 3px; }
+.donation-details a { color: #ffffff; text-decoration: underline; font-weight: bold; }
+
+/* Стиль для клікабельної карти */
+.card-copy {
+    cursor: pointer;
+    font-weight: 700;
+    background: rgba(255,255,255,0.15);
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 5px;
+    margin-top: 4px;
+    position: relative;
+}
+
+.card-copy:hover { background: rgba(255,255,255,0.25); }
+
+.tooltip {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+}
+
+/* Читання та футер */
+.layer-readings { width: 270.51px; height: 190.93px; left: 58px; top: 680px; z-index: 6; }
+.layer-footer-bg { width: 390px; height: 150px; left: 0; top: 850px; z-index: 1; }
+.layer-logo { width: 80px; height: 80px; left: 155px; top: 905px; z-index: 20; }

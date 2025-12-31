@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Бандерівська Коляда</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="mobile-container">
+        <div class="layer layer-up"><img src="img/up.svg" alt=""></div>
+
+        <div class="layer layer-portrait"><img src="img/image.svg" alt=""></div>
+
+        <div class="layer layer-centre"><img src="img/centre.svg" alt=""></div>
+
+        <a href="https://send.monobank.ua/jar/35PhtHQzw9" target="_blank" class="button-support">ПІДТРИМАТИ</a>
+
+        <div class="donation-details">
+            <p>ПриватБанк: <a href="https://www.privat24.ua/send/dxv11" target="_blank">Переказати</a></p>
+            <p>PayPal: <span>yuriy.syrotyuk@svoboda.org.ua</span></p>
+            <p class="card-copy" onclick="copyCard()" title="Натисніть, щоб скопіювати">
+                Карта: <span id="cardNumber">5375 4112 1499 2583</span>
+                <span class="tooltip" id="copyTooltip">Скопійовано!</span>
+            </p>
+        </div>
+
+        <a href="https://ussd.org.ua/2025/10/01/trynadczyati-banderivski-chytannya-na-temu-mapa-naczionalnyh-interesiv-ukrayiny-vidbudutsya-u-kyyevi/" target="_blank" class="layer layer-readings">
+            <img src="img/XIII-БЧ.svg" alt="XIII Бандерівські читання">
+        </a>
+
+        <div class="layer layer-footer-bg"><img src="img/down.svg" alt=""></div>
+        <a href="https://ussd.org.ua/" target="_blank" class="layer layer-logo">
+            <img src="img/mask-group.svg" alt="УССД">
+        </a>
+    </div>
+
+    <script>
+        function copyCard() {
+            const cardText = document.getElementById('cardNumber').innerText;
+            navigator.clipboard.writeText(cardText).then(() => {
+                const tooltip = document.getElementById('copyTooltip');
+                tooltip.style.display = 'inline';
+                setTimeout(() => { tooltip.style.display = 'none'; }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
